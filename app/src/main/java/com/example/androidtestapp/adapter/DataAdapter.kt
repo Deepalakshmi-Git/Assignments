@@ -115,24 +115,12 @@ open class DataAdapter(var context: Context) : RecyclerView.Adapter<RecyclerView
                                binding.view1.visibility=View.GONE
                                expandedSize[position] = 0
                            }
-
-                         /*  if (expandedSize[position] == 0) {
-                               binding.detailLay.visibility=View.VISIBLE
-                               binding.view1.visibility=View.VISIBLE
-                    changeViewSizeWithAnimation(
-                        binding.detailLay,
-                        200,
-                        300L
-                    )
-                    expandedSize[position] = 200
-                } else {
-                               binding.detailLay.visibility=View.GONE
-                               binding.view1.visibility=View.GONE
-                    changeViewSizeWithAnimation(binding.detailLay, 0, 300L)
-                    expandedSize[position] = 0
-
-                }*/
             }
+
+            itemView.setOnClickListener {
+                (context as DataListener).onItemClick(item.userId,item.id,item.title,item.body)
+            }
+
 
         }
     }

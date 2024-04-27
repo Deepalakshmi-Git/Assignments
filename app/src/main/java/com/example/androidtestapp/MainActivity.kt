@@ -1,5 +1,6 @@
 package com.example.androidtestapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -42,15 +43,17 @@ open class MainActivity : BaseAppCompactActivity<ActivityMainBinding>(),DataList
     {
         mDataViewModel.onGetData().observe(this,{
             Log.d("Data","Found"+it)
-
             mDataAdapter.updateData(it)
-
-          //  mBinding.recyclerView=
-
         })
     }
 
-    override fun onItemClick(userId: String, id: String, title: String, body: String) {
+
+
+    override fun onItemClick(userId: String?, id: String?, title: String?, body: String?) {
+        val intent = Intent(this@MainActivity, DetailedView::class.java)
+        intent.putExtra("Title", title)
+        intent.putExtra("Body",body)
+        startActivity(intent)
     }
 
     override fun onApiCall() {
@@ -58,27 +61,4 @@ open class MainActivity : BaseAppCompactActivity<ActivityMainBinding>(),DataList
         mDataViewModel.getData(mSkip)
 
     }
-
-    /* override fun onCreate(savedInstanceState: Bundle?) {
-         super.onCreate(savedInstanceState)
-         enableEdgeToEdge()
-         setContentView(R.layout.activity_main)
-         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-             insets
-         }
-
-         mDataAdapter=
-         val mDataViewModel= ViewModelProvider(this).get(DataViewModel::class.java)
-         mDataViewModel.getData(10)
-
-
-         mDataViewModel.onGetData().observe(this,{
-             Log.d("MediaDetails","Observed"+it)
-
-             mJobsAdapter.updateData(it, mViewType, mSkip)
-         })
-
-     }*/
 }

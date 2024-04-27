@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AndroidTestApp"
         tools:targetApi="31">
         <activity
+            android:name=".DetailedView"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
