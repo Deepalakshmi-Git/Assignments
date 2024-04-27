@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryText">#414141</color>
+    <color name="colorPrimary">#4FD44C</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorShaded">#F7F7F7</color>
+    <color name="colorDisabledText">#999999</color>
+    <color name="colorBlueTextLine">#0F81C0</color>
+    <color name="color_line">#F4F3F8</color>
+    <color name="colorElevationShadow">#0F1C8BC1</color>
+    <color name="colorPrimaryTheme1">#5F4CD4</color>
+</resources>

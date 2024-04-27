@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidTestApp</string>
+    <string name="no_internet">Please check your internet connection.</string>
+    <string name="retrofit_failure">There might be some problem please try again later.</string>
+</resources>

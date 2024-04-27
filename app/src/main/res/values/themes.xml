@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AndroidTestApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.AndroidTestApp" parent="Base.Theme.AndroidTestApp" />
+
+    <!-- TextView Styles -->
+    <style name="StyleToolbarTitle" parent="StyleText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="StyleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+</resources>
+
